@@ -81,3 +81,10 @@ services:
     ports:
       - 22
       - "80:80"
+  stress:
+    image: m0rf30/clearwater-stress
+    environment:
+      - ADDITIONAL_SHARED_CONFIG
+    ports:
+      - 5052
+      - 5054"
