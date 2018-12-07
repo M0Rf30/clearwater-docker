@@ -1,0 +1,27 @@
+real	0m6.173s
+user	0m0.504s
+sys	0m0.084s
+
+real	0m7.243s
+user	0m0.532s
+sys	0m0.148s
+
+real	0m6.618s
+user	0m0.480s
+sys	0m0.120s
+
+clearwater-docker_bono
+real	0m0.733s
+user	0m0.028s
+sys	0m0.024s
+
+clearwater-docker_sprout
+real	0m0.469s
+user	0m0.028s
+sys	0m0.024s
+
+homestead
+real	0m0.494s
+user	0m0.036s
+sys	0m0.008s
+
