@@ -10,18 +10,18 @@ real	0m6.618s
 user	0m0.480s
 sys	0m0.120s
 
-clearwater-docker_bono
-real	0m0.733s
-user	0m0.028s
-sys	0m0.024s
+clearwater-docker_bono_1
+real	0m1.424s
+user	0m0.004s
+sys	0m0.016s
 
-clearwater-docker_sprout
-real	0m0.469s
-user	0m0.028s
-sys	0m0.024s
-
-homestead
-real	0m0.494s
-user	0m0.036s
+clearwater-docker_sprout_1
+real	0m1.005s
+user	0m0.008s
 sys	0m0.008s
+
+clearwater-docker_homestead_1
+real	0m2.883s
+user	0m0.020s
+sys	0m0.004s
 
