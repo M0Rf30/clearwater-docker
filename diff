@@ -1,0 +1,87 @@
+--- minimal-distributed.yaml	2018-12-14 01:20:46.783501006 +0100
++++ /home/morfeo/Scrivania/clearwater-docker/minimal-distributed.yaml	2018-12-14 01:13:54.251187590 +0100
+@@ -13,13 +13,13 @@
+       -initial-cluster etcd0=http://etcd:2380
+       -initial-cluster-state new
+   astaire:
+-    build: astaire
++    image: m0rf30/clearwater-astaire
+     environment:
+       - ADDITIONAL_SHARED_CONFIG
+     ports:
+       - 22
+   chronos:
+-    build: chronos
++    image: m0rf30/clearwater-chronos
+     environment:
+       - ADDITIONAL_SHARED_CONFIG
+     ports:
+@@ -27,13 +27,13 @@
+   cassandra:
+     sysctls:
+        net.ipv6.conf.lo.disable_ipv6: 0
+-    build: cassandra
++    image: m0rf30/clearwater-cassandra
+     environment:
+       - ADDITIONAL_SHARED_CONFIG
+     ports:
+       - 22
+   bono:
+-    build: bono
++    image: m0rf30/clearwater-bono
+     environment:
+       - PUBLIC_IP
+       - ADDITIONAL_SHARED_CONFIG
+@@ -45,39 +45,46 @@
+       - "5060:5060/udp"
+       - "5062:5062"
+   sprout:
+-    build: sprout
++    image: m0rf30/clearwater-sprout
+     environment:
+       - ADDITIONAL_SHARED_CONFIG
+     ports:
+       - 22
+   homestead:
+-    build: homestead
++    image: m0rf30/clearwater-homestead
+     environment:
+       - ADDITIONAL_SHARED_CONFIG
+     ports:
+       - 22
+   homestead-prov:
+-    build: homestead-prov
++    image: m0rf30/clearwater-homestead-prov
+     environment:
+       - ADDITIONAL_SHARED_CONFIG
+     ports:
+       - 22
+   homer:
+-    build: homer
++    image: m0rf30/clearwater-homer
+     environment:
+       - ADDITIONAL_SHARED_CONFIG
+     ports:
+       - 22
+   ralf:
+-    build: ralf
++    image: m0rf30/clearwater-ralf
+     environment:
+       - ADDITIONAL_SHARED_CONFIG
+     ports:
+       - 22
+   ellis:
+-    build: ellis
++    image: m0rf30/clearwater-ellis
+     environment:
+       - ADDITIONAL_SHARED_CONFIG
+     ports:
+       - 22
+       - "80:80"
++  stress:
++    image: m0rf30/clearwater-stress
++    environment:
++      - ADDITIONAL_SHARED_CONFIG
++    ports:
++      - 5052
++      - 5054"

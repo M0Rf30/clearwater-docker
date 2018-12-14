@@ -13,13 +13,13 @@ services:
       -initial-cluster etcd0=http://etcd:2380
       -initial-cluster-state new
   astaire:
-    image: m0rf30/clearwater-astaire
+    build: astaire
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   chronos:
-    image: m0rf30/clearwater-chronos
+    build: chronos
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
@@ -27,13 +27,13 @@ services:
   cassandra:
     sysctls:
        net.ipv6.conf.lo.disable_ipv6: 0
-    image: m0rf30/clearwater-cassandra
+    build: cassandra
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   bono:
-    image: m0rf30/clearwater-bono
+    build: bono
     environment:
       - PUBLIC_IP
       - ADDITIONAL_SHARED_CONFIG
@@ -45,46 +45,39 @@ services:
       - "5060:5060/udp"
       - "5062:5062"
   sprout:
-    image: m0rf30/clearwater-sprout
+    build: sprout
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   homestead:
-    image: m0rf30/clearwater-homestead
+    build: homestead
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   homestead-prov:
-    image: m0rf30/clearwater-homestead-prov
+    build: homestead-prov
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   homer:
-    image: m0rf30/clearwater-homer
+    build: homer
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   ralf:
-    image: m0rf30/clearwater-ralf
+    build: ralf
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
   ellis:
-    image: m0rf30/clearwater-ellis
+    build: ellis
     environment:
       - ADDITIONAL_SHARED_CONFIG
     ports:
       - 22
       - "80:80"
-  stress:
-    image: m0rf30/clearwater-stress
-    environment:
-      - ADDITIONAL_SHARED_CONFIG
-    ports:
-      - 5052
-      - 5054"
