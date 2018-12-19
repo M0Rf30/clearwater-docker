@@ -1,4 +1,4 @@
-FROM clearwater/base
+FROM m0rf30/clearwater-base
 MAINTAINER maintainers@projectclearwater.org
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --force-yes homestead
